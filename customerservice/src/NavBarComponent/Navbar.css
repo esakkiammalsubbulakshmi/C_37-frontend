@@ -1,0 +1,64 @@
+/* Enhanced Navbar Styles */
+.navbar {
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient background for a modern look */
+  padding: 15px 30px; /* Increased padding for a more spacious feel */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for a softer appearance */
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px; /* Larger font size for prominence */
+  font-family: 'Roboto', sans-serif; /* Modern font family */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  position: relative; /* Required for the pseudo-element positioning */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Slightly larger font size for better readability */
+  font-weight: 500; /* Semi-bold for emphasis */
+  transition: color 0.3s ease, padding 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar ul li a:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #d0d0d0; /* Lighter color on hover for better contrast */
+  padding-bottom: 5px; /* Adding space for the underline effect */
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #d0d0d0; /* Underline color */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar ul li:first-child {
+  margin-left: 0; /* Remove left margin for the first item */
+}
+
